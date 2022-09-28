@@ -30,13 +30,15 @@ export default function TaskForm() {
     }
 
     useEffect(() => {
-        const foundTask = tasks.find(task => (task.id.toString()) === params.id);
-        if(foundTask){
-            setTask(foundTask);
-        }else{
-            setTask('');
-            setTask({...task, type: 'Normal'})
-        }
+        if(tasks.length > 0){
+            const foundTask = tasks.find(task => (task.id.toString()) === params.id);
+            if(foundTask){
+                setTask(foundTask);
+            }else{
+                setTask('');
+                setTask({...task, type: 'Normal'})
+            }
+    }
     }, [params.id])
     
   return (

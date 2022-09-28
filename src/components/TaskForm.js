@@ -61,7 +61,7 @@ export default function TaskForm() {
                     <option value="Urgent">Urgent</option>
                 </select>     
                 <br /><br />
-                <button className='bg-violet-600 text-white font-bold px-4 py-2 rounded-md m-auto hover:bg-violet-700 '>Add task</button>           
+                <button className='bg-violet-600 text-white font-bold px-4 py-2 rounded-md m-auto hover:bg-violet-700 '>{!task.id ? 'Add task' : 'Edit task'}</button>           
             </form>
         </div>
     </div>

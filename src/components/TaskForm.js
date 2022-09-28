@@ -11,7 +11,7 @@ export default function TaskForm() {
 
     const handleChange = (e) => {
         setTask({...task, [e.target.name]: e.target.value})
-        console.log(task)
+        //console.log(task)
         
     }
 
@@ -21,11 +21,11 @@ export default function TaskForm() {
             updateTask(task)
         }else{
             if(task.type === undefined) {setTask({...task, type: 'Normal'})}
-            console.log(task.type)
-            console.log(task)
+            //console.log(task.type)
+            //console.log(task)
             addTask(task);
         }
-        console.log(tasks)
+        //console.log(tasks)
         navigate('/');
     }
 

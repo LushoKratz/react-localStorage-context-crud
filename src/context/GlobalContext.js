@@ -9,7 +9,7 @@ import {v4} from 'uuid';
 //  ]
 //}
 
-const initialState = {tasks: JSON.parse(localStorage.getItem('tasks'))};
+const initialState = {tasks: JSON.parse(localStorage.getItem('tasks')) ? '' : []};
 //if(cartItemsData.length > 0){ state.tasks = cartItemsData; console.log(initialState) }
 
 export const GlobalContext = createContext(initialState);
